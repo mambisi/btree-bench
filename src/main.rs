@@ -24,7 +24,7 @@ fn main() {
             let mut btree = BTreeMap::new();
             for i in 0..n{
                 if i % 100_000 == 0 {
-                    println!("[vec] in progress...")
+                    println!("[array] in progress...")
                 }
                 let i = i as u8 % u8::MAX;
                 let key = [i;32];
@@ -35,7 +35,7 @@ fn main() {
             let mut btree = BTreeMap::new();
             for i in 0..n {
                 if i % 100_000 == 0 {
-                    println!("[array] in progress...")
+                    println!("[vec] in progress...")
                 }
                 let i = i as u8 % u8::MAX;
                 let key = [i;32];
