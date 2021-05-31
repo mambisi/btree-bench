@@ -26,7 +26,7 @@ fn main() {
                 if i % 100_000 == 0 {
                     println!("[vec] in progress...")
                 }
-                let i = (i % u8::MAX) as u8;
+                let i = (i % u8::MAX as u32) as u8;
                 let key = [i;32];
                 let value = KeyDirEntry::default();
                 btree.insert(key.to_vec(),value);
@@ -38,7 +38,7 @@ fn main() {
                 if i % 100_000 == 0 {
                     println!("[array] in progress...")
                 }
-                let i = (i % u8::MAX) as u8;
+                let i = (i % u8::MAX as u32) as u8;
                 let key = [i;32];
                 let value = KeyDirEntry::default();
                 btree.insert(key,value);
