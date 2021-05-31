@@ -27,9 +27,9 @@ fn main() {
                     println!("[vec] in progress...")
                 }
                 let i = (i % u8::MAX as u32) as u8;
-                let key = [i;32];
+                let key = vec![i;32];
                 let value = KeyDirEntry::default();
-                btree.insert(key.to_vec(),value);
+                btree.insert(key,value);
             }
 
         }else {
