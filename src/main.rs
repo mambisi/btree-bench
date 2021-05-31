@@ -7,7 +7,7 @@ pub struct KeyDirEntry {
     data_entry_position: u32,
 }
 fn main() {
-    let n = 5_000_000_u32;
+    let n = 10_000_000_u32;
     let matches = App::new("Btree Benchmarking")
         .version("1.0")
         .author("")
