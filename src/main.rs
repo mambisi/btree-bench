@@ -22,17 +22,6 @@ fn main() {
     if let Some(ds) = matches.value_of("ds") {
         if ds == "vec" {
             let mut btree = BTreeMap::new();
-            for i in 0..n{
-                if i % 100_000 == 0 {
-                    println!("[array] in progress...")
-                }
-                let i = i as u8 % u8::MAX;
-                let key = [i;32];
-                let value = KeyDirEntry::default();
-                btree.insert(key,value);
-            }
-        }else {
-            let mut btree = BTreeMap::new();
             for i in 0..n {
                 if i % 100_000 == 0 {
                     println!("[vec] in progress...")
@@ -41,6 +30,18 @@ fn main() {
                 let key = [i;32];
                 let value = KeyDirEntry::default();
                 btree.insert(key.to_vec(),value);
+            }
+
+        }else {
+            let mut btree = BTreeMap::new();
+            for i in 0..n{
+                if i % 100_000 == 0 {
+                    println!("[array] in progress...")
+                }
+                let i = i as u8 % u8::MAX;
+                let key = [i;32];
+                let value = KeyDirEntry::default();
+                btree.insert(key,value);
             }
         }
     }
