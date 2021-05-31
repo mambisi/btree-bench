@@ -13,7 +13,7 @@ fn main() {
         .author("")
         .about("")
         .arg(Arg::with_name("ds")
-            .short('d')
+            .short("d")
             .long("data")
             .value_name("DATA")
             .takes_value(true))
